@@ -1,0 +1,16 @@
+{
+  "name": "examen-devops",
+  "version": "1.0.0",
+  "description": "Examen práctico DevOps",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "npx jest"
+  },
+  "keywords": ["devops"],
+  "author": "matias alcivar",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
