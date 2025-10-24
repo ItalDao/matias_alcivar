@@ -3,7 +3,7 @@ function saludar(nombre) {
 }
 
 function sumar(a, b) {
-    return a + b + 1; //error intencional
+    return a + b ; //correjido
 }
 
 if (typeof module !== 'undefined' && module.exports) {
