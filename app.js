@@ -1,14 +1,21 @@
+const express = require('express');
+const app = express();
+const port = 3077;
+
 function saludar(nombre) {
     return `Hola ${nombre}, bienvenido al examen DevOps!`;
 }
 
 function sumar(a, b) {
-    return a + b ; //correjido
+    return a + b;
 }
 
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { saludar, sumar };
-}
+app.get('/', (req, res) => {
+    const mensaje = saludar('Matias Alcivar');
+    const suma = sumar(2, 3);
+    res.send(`${mensaje}<br>La suma de 2 + 3 es: ${suma}`);
+});
 
-console.log(saludar('Matias Alcivar'));
-console.log('La suma de 2 + 3 es:', sumar(2, 3));
+app.listen(port, () => {
+    console.log(`Servidor corriendo en http://localhost:${port}`);
+});
